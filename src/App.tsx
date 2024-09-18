@@ -22,7 +22,7 @@ function App() {
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div className="min-h-screen flex flex-col">
-          <header className="flex justify-between w-full flex-row p-4">
+          {/* <header className="flex justify-between w-full flex-row p-4">
             <Button variant="link" asChild className="text-primary h-8 w-8 p-0">
               <a href="https://github.com/Georgegriff/react-dnd-kit-tailwind-shadcn-ui">
                 <Github className="fill-current h-full w-full" />
@@ -32,17 +32,17 @@ function App() {
               <a href="https://griffa.dev">@griffadev</a>
             </Button>
             <ThemeToggle />
-          </header>
+          </header> */}
           <main className="mx-4 flex flex-col gap-6">
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            {/* <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Drag and Drop Kanban Board
-            </h1>
+            </h1> */}
             <KanbanBoard />
-            <p className="leading-7 [&:not(:first-child)]:mt-6">
+            {/* <p className="leading-7 [&:not(:first-child)]:mt-6">
               With Keyboard Controls and Screen Reader interactions.
-            </p>
+            </p> */}
           </main>
-          <footer className="mt-6">
+          {/* <footer className="mt-6">
             <ul className="flex items-center justify-center">
               <li>
                 <FooterLink>
@@ -65,7 +65,7 @@ function App() {
                 </FooterLink>
               </li>
             </ul>
-          </footer>
+          </footer> */}
         </div>
       </ThemeProvider>
     </>
