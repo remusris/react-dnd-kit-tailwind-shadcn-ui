@@ -31,16 +31,16 @@ const defaultCols = [
     id: "in-progress" as const,
     title: "In progress",
   },
-  {
+  /* {
     id: "done" as const,
     title: "Done",
-  },
+  }, */
 ] satisfies Column[];
 
 export type ColumnId = (typeof defaultCols)[number]["id"];
 
 const initialTasks: Task[] = [
-  {
+  /* {
     id: "task1",
     columnId: "done",
     content: "Project initiation and planning",
@@ -54,7 +54,7 @@ const initialTasks: Task[] = [
     id: "task3",
     columnId: "done",
     content: "Create wireframes and mockups",
-  },
+  }, */
   {
     id: "task4",
     columnId: "in-progress",
@@ -243,13 +243,30 @@ export function KanbanBoard() {
     >
       <BoardContainer>
         <SortableContext items={columnsId}>
-          {columns.map((col) => (
+          {/* {columns.map((col) => (
             <BoardColumn
               key={col.id}
               column={col}
               tasks={tasks.filter((task) => task.columnId === col.id)}
             />
-          ))}
+          ))} */}
+
+          <div className="h-screen flex flex-row">
+              <div className="h-1/2 bg-gray-100 p-4">
+                <BoardColumn 
+                  key={columns[0].id}
+                  column={columns[0]}
+                  tasks={tasks.filter((task) => task.columnId === columns[0].id)}
+                />
+              </div>
+              <div className="h-1/2 bg-gray-200 p-4">
+                <BoardColumn 
+                  key={columns[1].id}
+                  column={columns[1]}
+                  tasks={tasks.filter((task) => task.columnId === columns[1].id)}
+                />
+              </div>  
+          </div>
         </SortableContext>
       </BoardContainer>
 
